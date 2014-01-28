@@ -22,3 +22,7 @@ yum update --downloadonly --downloaddir=/tmp/download-temp
 
 wget https://raw.github.com/mjbommar/oracle-database-fabric-boto-aws/master/deploy/template/public-yum-el5.repo_template
 wget https://raw.github.com/RobOJHU/REPOS/master/public-yum-el5.repo
+
+
+ls > rpmlist-temp.txt
+rm -i kernel* php* autofs* oracle* libgcj* mysql*  samba3x* httpd* mod_ssl* libtdb*
