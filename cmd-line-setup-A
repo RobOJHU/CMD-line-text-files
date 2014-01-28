@@ -1,0 +1,23 @@
+##################
+
+CAT this file then Cut and Paste into CMD line
+
+##################
+
+ mv $HOME/.bash_profile .bash_profileSAV
+ wget https://raw.github.com/RobOJHU/BASHRC-BASH-profiles/master/.bash_profile
+ 
+ . $HOME/.bash_profile
+ 
+ 
+#######################################
+ 
+wget https://raw.github.com/RobOJHU/Shell_Scripts/master/createuser
+ 
+yum install yum-downloadonly
+mkdir /tmp/download-temp
+yum update --downloadonly --downloaddir=/tmp/download-temp
+
+### say [Y] to install question --at the end --script will NOT install just download
+
+wget https://raw.github.com/mjbommar/oracle-database-fabric-boto-aws/master/deploy/template/public-yum-el5.repo_template
