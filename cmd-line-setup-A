@@ -24,7 +24,7 @@ wget https://raw.github.com/mjbommar/oracle-database-fabric-boto-aws/master/depl
 wget https://raw.github.com/RobOJHU/REPOS/master/public-yum-el5.repo
 
 
-ls /tmp/download-temp > rpmlist-temp.txt
+ls /tmp/download-temp > /tmp/rpmlist-temp.txt
 rm -i kernel* php* autofs* oracle* libgcj* mysql*  samba3x* httpd* mod_ssl* libtdb*
 awk '{print "rpm -U "  $1}' /tmp/rpmlist-temp.txt
 awk '{print "rpm -U "  $1}' /tmp/rpmlist-temp.txt > /tmp/rpmlist-RUN-install.sh
