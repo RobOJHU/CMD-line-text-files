@@ -26,3 +26,4 @@ wget https://raw.github.com/RobOJHU/REPOS/master/public-yum-el5.repo
 
 ls > rpmlist-temp.txt
 rm -i kernel* php* autofs* oracle* libgcj* mysql*  samba3x* httpd* mod_ssl* libtdb*
+awk '{print "rpm -U "  $1}' rpmlist-temp.txt
