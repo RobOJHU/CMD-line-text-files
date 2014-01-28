@@ -21,3 +21,4 @@ yum update --downloadonly --downloaddir=/tmp/download-temp
 ### say [Y] to install question --at the end --script will NOT install just download
 
 wget https://raw.github.com/mjbommar/oracle-database-fabric-boto-aws/master/deploy/template/public-yum-el5.repo_template
+wget https://raw.github.com/RobOJHU/REPOS/master/public-yum-el5.repo
