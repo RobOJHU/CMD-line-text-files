@@ -27,6 +27,6 @@ wget https://raw.github.com/RobOJHU/REPOS/master/public-yum-el5.repo
 ls /tmp/download-temp > /tmp/download-temp/rpmlist-temp.txt
 rm -i kernel* php* autofs* oracle* libgcj* mysql*  samba3x* httpd* mod_ssl* libtdb*
 awk '{print "rpm -Uvh "  $1}' /tmp/download-temp/rpmlist-temp.txt
-awk '{print "rpm -Uvh "  $1}' /tmp/download-temp/rpmlist-temp.txt > /tmp/download-temp/rpmlist-RUN-install.sh
+awk '{print "rpm -Uvh /tmp/download-temp/"$1}' /tmp/download-temp/rpmlist-temp.txt > /tmp/download-temp/rpmlist-RUN-install.sh
 chmod 775 /tmp/download-temp/rpmlist-RUN-install.sh
 . /tmp/download-temp/rpmlist-RUN-install.sh
