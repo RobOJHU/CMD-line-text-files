@@ -1,6 +1,6 @@
  Cut and Paste into CMD line
 ##################
- mv $HOME/.bash_profile .bash_profileSAV
+ mv $HOME/.bash_profile $HOME/.bash_profileSAV
  wget https://raw.github.com/RobOJHU/BASHRC-BASH-profiles/master/.bash_profile
  
  . $HOME/.bash_profile
