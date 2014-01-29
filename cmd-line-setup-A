@@ -34,3 +34,6 @@ chmod 770 /tmp/download-temp/rpmlist-RUN-install.sh
 #!/bin/sh
 
 . /tmp/download-temp/rpmlist-RUN-install.sh
+ ll /etc/yum/pluginconf.d/
+ vi /etc/yum/pluginconf.d/rhnplugin.conf
+ yum info yum
