@@ -25,6 +25,7 @@
  ll /etc/yum/pluginconf.d/
  vi /etc/yum/pluginconf.d/rhnplugin.conf
  yum info yum
+ yum check-update
  ll /etc/yum.repos.d/
  cat /etc/redhat-release 
  wget http://public-yum.oracle.com/public-yum-el5.repo
