@@ -2,10 +2,7 @@
 ##################
  mv $HOME/.bash_profile $HOME/.bash_profileSAV
  wget https://raw.github.com/RobOJHU/BASHRC-BASH-profiles/master/.bash_profile
- 
  . $HOME/.bash_profile
-#######################################
- 
  wget https://raw.github.com/RobOJHU/Shell_Scripts/master/createuser
  yum install yum-downloadonly
  mkdir /tmp/download-temp
@@ -30,3 +27,4 @@
  cat /etc/redhat-release 
  wget http://public-yum.oracle.com/public-yum-el5.repo
  wget http://public-yum.oracle.com/public-yum-ol6.repo
+ cat /root/.bash_profile
