@@ -12,7 +12,7 @@
  wget https://raw.github.com/mjbommar/oracle-database-fabric-boto-aws/master/deploy/template/public-yum-el5.repo_template
  wget https://raw.github.com/RobOJHU/REPOS/master/public-yum-el5.repo
  cd /tmp/download-temp
- rm -i kernel* php* autofs* oracle* libgcj* mysql* postgresql* libtdb* samba3x* httpd* mod_ssl* libtdb* rhn* 389* java*
+ rm -i kernel* php* autofs* oracle* libgcj* mysql* postgresql* *vmware libtdb* samba3x* httpd* mod_ssl* libtdb* rhn* 389* java*
  ls /tmp/download-temp > /tmp/download-temp/ZZrpmlist-temp.txt
  awk '{print "rpm -Uvh "  $1}' /tmp/download-temp/ZZrpmlist-temp.txt
  awk '{print "rpm -Uvh /tmp/download-temp/"$1}' /tmp/download-temp/ZZrpmlist-temp.txt > /tmp/download-temp/ZZrpmlist-RUN-install.sh
