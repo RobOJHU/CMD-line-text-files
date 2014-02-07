@@ -7,5 +7,14 @@
  kexec -e
  uname -r
  
- $HOME/which_kernel.sh
+ yum install yum-downloadonly
+ mkdir /tmp/kernel-rpm
+ yum install kernel --downloadonly --downloaddir=/tmp/kernel-rpm
+ ll /tmp/kernel-rpm
+ 
+  $HOME/which_kernel.sh
   yum info kernel
+  cd /etc/yum.repos.d/
+  rpm -ivh kernel-2.6.32-431.3.1.el6.x86_64.rpm
+  rpm -ivh kernel-firmware-2.6.32-431.3.1.el6.noarch.rpm
+  vim /boot/grub/grub.conf
