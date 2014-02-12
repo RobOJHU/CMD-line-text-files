@@ -6,7 +6,7 @@
  cat /etc/redhat-release
  kexec -e
  uname -r
- 
+ yum install kexec-tools
  yum install yum-downloadonly
  mkdir /tmp/kernel-rpm
  yum install kernel --downloadonly --downloaddir=/tmp/kernel-rpm
