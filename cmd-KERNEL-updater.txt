@@ -12,6 +12,22 @@
  yum install kernel --downloadonly --downloaddir=/tmp/kernel-rpm
  ll /tmp/kernel-rpm
  
+ 
+ mkdir /tmp/download-kernel
+ yum update --downloadonly --downloaddir=/tmp/download-kernel
+
+## say [Y] to install question --at the end --script will NOT install just download
+ wget https://raw.github.com/mjbommar/oracle-database-fabric-boto-aws/master/deploy/template/public-yum-el5.repo_template
+ wget https://raw.github.com/RobOJHU/REPOS/master/public-yum-el5.repo
+ cd /tmp/download-kernel
+ rm -i kernel* php* autofs* oracle* libgcj* mysql* postgresql* *vmware libtdb* samba3x* httpd* mod_ssl* libtdb* rhn* 389* java*
+ ls /tmp/download-kernel > /tmp/download-kernel/ZZrpmlist-temp.txt
+ awk '{print "rpm -ivh /tmp/download-kernel/"$1}' /tmp/download-kernel/ZZrpmlist-temp.txt > /tmp/download-kernel/ZZrpmlist-RUN-install.sh
+ chmod 770 /tmp/download-kernel/ZZrpmlist-RUN-install.sh
+ #!/bin/sh
+ . /tmp/download-kernel/ZZrpmlist-RUN-install.sh
+ 
+ 
   $HOME/which_kernel.sh
   yum info kernel
   cd /etc/yum.repos.d/
