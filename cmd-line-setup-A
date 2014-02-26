@@ -4,7 +4,9 @@
  wget https://raw.github.com/RobOJHU/BASHRC-BASH-profiles/master/.bash_profile
  . $HOME/.bash_profile
  wget https://raw.github.com/RobOJHU/Shell_Scripts/master/createuser
- yum install yum-downloadonly
+ ### install yum plugin for download only ###
+RH5  yum install yum-downloadonly
+RH6  yum install yum-plugin-downloadonly
  mkdir /tmp/download-temp
  yum update --downloadonly --downloaddir=/tmp/download-temp
  yum update --downloadonly --downloaddir=/tmp/download-temp --disableplugin=rhnplugin
