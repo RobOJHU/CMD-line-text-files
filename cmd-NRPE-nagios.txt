@@ -2,7 +2,8 @@
 
  service iptables status
  sestatus
- . ./which_kernel.sh1143  groupadd nagios
+ . ./which_kernel.sh
+ 1143  groupadd nagios
  1144  useradd -g nagios -md /usr/local/nagios nagios
  1145  id nagios
  1150  mkdir Nagios-Download
