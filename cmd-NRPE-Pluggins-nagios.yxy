@@ -9,7 +9,7 @@
  1151  cd Nagios-Download
  1152  ll
  1162  cat install.txt
- 1163  wget http://sourceforge.net/projects/nagios/files/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz/download
+ 1163  wget http://sourceforge.net/projects/nagios/files/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz
  1165  tar -xzf nrpe-2.15.tar.gz
  1167  cd nrpe-2.15/
  1169  ./configure
