@@ -1,0 +1,8 @@
+ 
+ wget --no-check-certificate https://raw.github.com/RobOJHU/Shell_Scripts/master/which_kernel.sh
+ wget --no-check-certificate  https://raw.github.com/RobOJHU/CMD-line-text-files/master/cmd-line-setup-A
+ 
+ wget --no-check-certificate  https://raw.github.com/RobOJHU/CMD-line-text-files/master/cmd-KERNEL-updater.txt
+ wget --no-check-certificate  https://raw.github.com/RobOJHU/REPOS/master/public-yum-el5.repo
+  mv .bash_profile .bash_profileSAV
+  wget --no-check-certificate  https://raw.github.com/RobOJHU/BASHRC-BASH-profiles/master/.bash_profile
