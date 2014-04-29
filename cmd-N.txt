@@ -1,0 +1,47 @@
+######################################  install NRPE and Pluggins ###################
+
+ service iptables status
+ sestatus
+ . ./which_kernel.sh
+  groupadd nagios
+  useradd -g nagios -md /usr/local/nagios nagios
+   id nagios
+   mkdir Nagios-Download
+  cd Nagios-Download
+  ll
+  cat install.txt
+  wget http://sourceforge.net/projects/nagios/files/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz
+   tar -xzf nrpe-2.15.tar.gz
+  cd nrpe-2.15/
+ ./configure
+ make all
+ 
+ 
+ make install-daemon
+ make install-daemon-config
+ cd /usr/local/nagios/etc/
+ vim nrpe.cfg
+ groupadd nagios
+ useradd -g nagios -md /usr/local/nagios nagios
+ /usr/local/nagios/bin/nrpe -c /usr/local/nagios/etc/nrpe.cfg -d
+ ps -auxwff
+ wget http://assets.nagios.com/downloads/nagiosplugins/nagios-plugins-1.5.tar.gz
+  tar -xzf nrpe-2.15.tar.gz
+ 
+ cd nagios-plugins-1.5/
+ tar -xzf nagios-plugins-1.5.tar.gz
+  ./configure 
+
+ make
+ make install
+ updatedb
+ cd /root/pluggins/nagios-plugins-1.5/plugins/
+ /usr/local/nagios/bin/nrpe -c /usr/local/nagios/etc/nrpe.cfg -d
+ ps auxwff
+ vim /usr/local/nagios/etc/nrpe.cfg
+ vim /usr/local/nagios/etc/nrpe.cfg
+ chown root:nagios ./check_users
+ hist | grep check_users
+ sestatus
+ cd /usr/lib64/nagios/
+ cp -r ./plugins 
