@@ -1,9 +1,9 @@
  Cut and Paste into CMD line
 ##################
  mv $HOME/.bash_profile $HOME/.bash_profileSAV
- wget https://raw.github.com/RobOJHU/BASHRC-BASH-profiles/master/.bash_profile
+ wget --no-check-certificate https://raw.github.com/RobOJHU/BASHRC-BASH-profiles/master/.bash_profile
  . $HOME/.bash_profile
- wget https://raw.github.com/RobOJHU/Shell_Scripts/master/createuser
+ wget --no-check-certificate https://raw.github.com/RobOJHU/Shell_Scripts/master/createuser
  ### install yum plugin for download only ###
 RH5  yum install yum-downloadonly
 RH6  yum install yum-plugin-downloadonly
