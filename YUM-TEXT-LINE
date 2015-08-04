@@ -1,0 +1,11 @@
+cd /root/YumDownLoader/
+
+yum update
+cat /var/log/yum.log | grep 'Aug'
+cat /var/log/yum.log | grep 'Aug 04 11:' 
+mkdir YumDownLoader
+cd /root/YumDownLoader/
+
+ cat /var/log/yum.log | grep 'Aug 04' | awk -F ":" '{print $NF}' > AUG04-update.list
+ #########  this one ##########
+ cat /var/log/yum.log | grep 'Aug 04' | awk -F ":" '{print $NF}' | sed ':a;N;$!ba;s/\n/ /g' > Aug04-oneliner.txt
